@@ -1,4 +1,3 @@
-
 export default function Loading(): React.JSX.Element {
   return (
    <main className="min-h-screen bg-background text-foreground">
