@@ -1,0 +1,44 @@
+name: Firebase Rules Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Firebase Rules
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Validate Firestore Rules
+        run: firebase deploy --only firestore:rules --project resora-bd7c5 --non-interactive
+
+      - name: Validate Firestore Indexes
+        run: firebase deploy --only firestore:indexes --project resora-bd7c5 --non-interactive
+
+      - name: Validate Storage Rules
+        run: firebase deploy --only storage --project resora-bd7c5 --non-interactive

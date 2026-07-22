@@ -1,0 +1,82 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+      timezone: "Asia/Kolkata"
+
+    open-pull-requests-limit: 10
+
+    target-branch: "develop"
+
+    versioning-strategy: increase
+
+    labels:
+      - dependencies
+      - npm
+
+    commit-message:
+      prefix: chore
+      include: scope
+
+    ignore:
+      - dependency-name: "firebase"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "next"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "react"
+        update-types:
+          - "version-update:semver-major"
+
+      - dependency-name: "react-dom"
+        update-types:
+          - "version-update:semver-major"
+
+    groups:
+      firebase:
+        patterns:
+          - "firebase*"
+
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+
+      nextjs:
+        patterns:
+          - "next"
+
+      typescript:
+        patterns:
+          - "typescript"
+          - "@types/*"
+
+      eslint:
+        patterns:
+          - "eslint*"
+
+      tailwind:
+        patterns:
+          - "tailwind*"
+
+      radix:
+        patterns:
+          - "@radix-ui/*"
+
+      framer:
+        patterns:
+          - "framer-motion"
+
+      misc:
+        patterns:
+          - "*”

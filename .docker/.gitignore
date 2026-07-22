@@ -1,0 +1,33 @@
+# Docker Runtime
+*.pid
+*.sock
+
+# Docker Logs
+*.log
+
+# Temporary Files
+tmp/
+temp/
+
+# Local Environment
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Docker Overrides
+docker-compose.override.yml
+
+# Build Cache
+build/
+dist/
+
+# Next.js
+.next/
+
+# Node
+node_modules/
+
+# OS Files
+.DS_Store
+Thumbs.db
