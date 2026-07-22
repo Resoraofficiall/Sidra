@@ -1,4 +1,3 @@
-x
 
 import type { Metadata } from "next";
 
