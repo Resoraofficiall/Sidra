@@ -3,10 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Discover extraordinary craftsmanship through India's premium luxury handcrafted
-marketplace."
+    "Discover extraordinary craftsmanship through India's premium luxury handcraftedmarketplace."
 };
-
 export default function HomePage(): React.JSX.Element {
  return (
   <main className="min-h-screen bg-background text-foreground">
