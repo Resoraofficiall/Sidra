@@ -88,7 +88,6 @@
 }
 
 003
-
 sidra/next.config.tsimport type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
