@@ -1,4 +1,3 @@
-x
 
 export default function Loading(): React.JSX.Element {
   return (
