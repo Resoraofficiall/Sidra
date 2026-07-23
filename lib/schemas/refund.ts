@@ -6,10 +6,4 @@ export const refundRequestSchema = z.object({
   reason: z.string().min(10).max(1000),
 });
 
-export type RefundRequestInput =
-  z.infer<
-    typeof refundRequestSchema
-  >;
-
-
-(Continuing directly with **836 → 855** in the next response with the same production quality.)
+export type RefundRequestInput = z.infer<typeof refundRequestSchema>;
