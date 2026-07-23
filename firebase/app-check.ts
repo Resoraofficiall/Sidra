@@ -34,8 +34,7 @@ const siteKey = getRecaptchaSiteKey();
  if (!siteKey) {
    if (process.env.NODE_ENV === "production") {
      logger.error(
-       "Firebase App Check is disabled because
-NEXT_PUBLIC_RECAPTCHA_ENTERPRISE_SITE_KEY is missing."
+       "Firebase App Check is disabled because NEXT_PUBLIC_RECAPTCHA_ENTERPRISE_SITE_KEY is missing."
      );
    }
 

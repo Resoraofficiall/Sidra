@@ -11,8 +11,7 @@ export function normalizeHexColor(value: string): string {
 
  if (normalized.length === 4) {
    return
-`#${normalized[1]}${normalized[1]}${normalized[2]}${normalized[2]}${normalized[3]}${normalize
-d[3]}`;
+`#${normalized[1]}${normalized[1]}${normalized[2]}${normalized[2]}${normalized[3]}${normalized[3]}`;
  }
 
     return normalized;
